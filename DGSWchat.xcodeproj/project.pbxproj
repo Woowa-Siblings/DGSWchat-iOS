@@ -30,6 +30,7 @@
 		9337AD402991D2DE00449466 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD3F2991D2DE00449466 /* ChatController.swift */; };
 		9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD412991D2E300449466 /* ChatDataManager.swift */; };
 		9337AD452991D6D000449466 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD442991D6D000449466 /* ChatData.swift */; };
+		9361D88B2992679D00819A3C /* NotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361D88A2992679D00819A3C /* NotifyView.swift */; };
 		937989502991F5620093A42A /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379894F2991F5620093A42A /* OnboardingData.swift */; };
 		9379895229920BAC0093A42A /* TransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895129920BAC0093A42A /* TransitionExt.swift */; };
 		93798955299229BD0093A42A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798954299229BD0093A42A /* StringExt.swift */; };
@@ -69,6 +70,7 @@
 		9337AD3F2991D2DE00449466 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		9337AD412991D2E300449466 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
 		9337AD442991D6D000449466 /* ChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
+		9361D88A2992679D00819A3C /* NotifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyView.swift; sourceTree = "<group>"; };
 		9379894F2991F5620093A42A /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		9379895129920BAC0093A42A /* TransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExt.swift; sourceTree = "<group>"; };
 		93798954299229BD0093A42A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				93181DBF2991BDF2008B51C0 /* LaunchView */,
 				93181DC92991BE9E008B51C0 /* OnboardingView */,
 				93181DC82991BE97008B51C0 /* MainView */,
+				9361D8892992678A00819A3C /* NotifyView */,
 				93181DE92991D296008B51C0 /* ChatView */,
 				93C2BAE6299263DE005C2CAF /* WriteView */,
 				93C2BADD299260FF005C2CAF /* ProfileView */,
@@ -244,6 +247,14 @@
 			children = (
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9361D8892992678A00819A3C /* NotifyView */ = {
+			isa = PBXGroup;
+			children = (
+				9361D88A2992679D00819A3C /* NotifyView.swift */,
+			);
+			path = NotifyView;
 			sourceTree = "<group>";
 		};
 		93C2BADD299260FF005C2CAF /* ProfileView */ = {
@@ -352,6 +363,7 @@
 				9337AD452991D6D000449466 /* ChatData.swift in Sources */,
 				93C2BAE12992610C005C2CAF /* ProfileController.swift in Sources */,
 				93181DDF2991D01A008B51C0 /* OnboardingController.swift in Sources */,
+				9361D88B2992679D00819A3C /* NotifyView.swift in Sources */,
 				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
 				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
 				93181DD92991C293008B51C0 /* ViewExt.swift in Sources */,
