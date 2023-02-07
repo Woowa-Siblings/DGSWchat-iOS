@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LaunchView.swift
 //  DGSWchat
 //
 //  Created by Mercen on 2023/02/07.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+// MARK: - Launch View of DGSWchat
+struct LaunchView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +20,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LaunchView()
     }
 }

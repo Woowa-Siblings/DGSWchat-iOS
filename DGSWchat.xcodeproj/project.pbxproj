@@ -8,17 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */; };
-		93181DAE2991BCA6008B51C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DAD2991BCA6008B51C0 /* ContentView.swift */; };
+		93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DAD2991BCA6008B51C0 /* MainView.swift */; };
 		93181DB02991BCA7008B51C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93181DAF2991BCA7008B51C0 /* Assets.xcassets */; };
 		93181DB32991BCA7008B51C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */; };
+		93181DBC2991BD52008B51C0 /* SWColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DBB2991BD52008B51C0 /* SWColor.swift */; };
+		93181DC12991BDF7008B51C0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC02991BDF7008B51C0 /* LaunchView.swift */; };
+		93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC32991BE3D008B51C0 /* Interceptor.swift */; };
+		93181DC72991BE75008B51C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93181DC62991BE75008B51C0 /* Alamofire */; };
+		93181DCB2991BEA6008B51C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DCA2991BEA6008B51C0 /* LoginView.swift */; };
+		93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DCD2991BEF5008B51C0 /* SWButton.swift */; };
+		93181DD12991BF4B008B51C0 /* SWFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD02991BF4B008B51C0 /* SWFont.swift */; };
+		93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD32991BF95008B51C0 /* SWLabel.swift */; };
+		93181DD62991C1A0008B51C0 /* SWField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD52991C1A0008B51C0 /* SWField.swift */; };
+		93181DD92991C293008B51C0 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD82991C293008B51C0 /* ViewExt.swift */; };
+		93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDB2991CFB2008B51C0 /* Constants.swift */; };
+		93181DDF2991D01A008B51C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDE2991D01A008B51C0 /* LoginController.swift */; };
+		93181DE12991D020008B51C0 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE02991D020008B51C0 /* LaunchController.swift */; };
+		93181DE32991D0B7008B51C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE22991D0B7008B51C0 /* Response.swift */; };
+		93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE42991D0E0008B51C0 /* TokenManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93181DA82991BCA6008B51C0 /* DGSWchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGSWchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGSWchatApp.swift; sourceTree = "<group>"; };
-		93181DAD2991BCA6008B51C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		93181DAD2991BCA6008B51C0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93181DAF2991BCA7008B51C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93181DBB2991BD52008B51C0 /* SWColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWColor.swift; sourceTree = "<group>"; };
+		93181DC02991BDF7008B51C0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		93181DC32991BE3D008B51C0 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		93181DCA2991BEA6008B51C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93181DCD2991BEF5008B51C0 /* SWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWButton.swift; sourceTree = "<group>"; };
+		93181DD02991BF4B008B51C0 /* SWFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFont.swift; sourceTree = "<group>"; };
+		93181DD32991BF95008B51C0 /* SWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLabel.swift; sourceTree = "<group>"; };
+		93181DD52991C1A0008B51C0 /* SWField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWField.swift; sourceTree = "<group>"; };
+		93181DD82991C293008B51C0 /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		93181DDA2991CB63008B51C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		93181DDB2991CFB2008B51C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93181DDD2991CFE8008B51C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		93181DDE2991D01A008B51C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		93181DE02991D020008B51C0 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		93181DE22991D0B7008B51C0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		93181DE42991D0E0008B51C0 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93181DC72991BE75008B51C0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +67,7 @@
 		93181D9F2991BCA6008B51C0 = {
 			isa = PBXGroup;
 			children = (
+				93181DDA2991CB63008B51C0 /* README.md */,
 				93181DAA2991BCA6008B51C0 /* DGSWchat */,
 				93181DA92991BCA6008B51C0 /* Products */,
 			);
@@ -51,9 +84,9 @@
 		93181DAA2991BCA6008B51C0 /* DGSWchat */ = {
 			isa = PBXGroup;
 			children = (
-				93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */,
-				93181DAD2991BCA6008B51C0 /* ContentView.swift */,
-				93181DAF2991BCA7008B51C0 /* Assets.xcassets */,
+				93181DDD2991CFE8008B51C0 /* Info.plist */,
+				93181DBE2991BDD6008B51C0 /* Resources */,
+				93181DBD2991BDD0008B51C0 /* Sources */,
 				93181DB12991BCA7008B51C0 /* Preview Content */,
 			);
 			path = DGSWchat;
@@ -65,6 +98,101 @@
 				93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93181DB92991BD3C008B51C0 /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				93181DC22991BE2A008B51C0 /* Network */,
+				93181DBA2991BD4A008B51C0 /* Component */,
+				93181DCC2991BEE6008B51C0 /* View */,
+				93181DD72991C1E5008B51C0 /* Extensions */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+		93181DBA2991BD4A008B51C0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				93181DBB2991BD52008B51C0 /* SWColor.swift */,
+				93181DD02991BF4B008B51C0 /* SWFont.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		93181DBD2991BDD0008B51C0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				93181DBF2991BDF2008B51C0 /* LaunchView */,
+				93181DC82991BE97008B51C0 /* MainView */,
+				93181DC92991BE9E008B51C0 /* LoginView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		93181DBE2991BDD6008B51C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */,
+				93181DAF2991BCA7008B51C0 /* Assets.xcassets */,
+				93181DB92991BD3C008B51C0 /* Presets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93181DBF2991BDF2008B51C0 /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				93181DC02991BDF7008B51C0 /* LaunchView.swift */,
+				93181DE02991D020008B51C0 /* LaunchController.swift */,
+			);
+			path = LaunchView;
+			sourceTree = "<group>";
+		};
+		93181DC22991BE2A008B51C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				93181DDB2991CFB2008B51C0 /* Constants.swift */,
+				93181DC32991BE3D008B51C0 /* Interceptor.swift */,
+				93181DE22991D0B7008B51C0 /* Response.swift */,
+				93181DE42991D0E0008B51C0 /* TokenManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		93181DC82991BE97008B51C0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				93181DAD2991BCA6008B51C0 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		93181DC92991BE9E008B51C0 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				93181DCA2991BEA6008B51C0 /* LoginView.swift */,
+				93181DDE2991D01A008B51C0 /* LoginController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		93181DCC2991BEE6008B51C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93181DD52991C1A0008B51C0 /* SWField.swift */,
+				93181DCD2991BEF5008B51C0 /* SWButton.swift */,
+				93181DD32991BF95008B51C0 /* SWLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93181DD72991C1E5008B51C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93181DD82991C293008B51C0 /* ViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +211,9 @@
 			dependencies = (
 			);
 			name = DGSWchat;
+			packageProductDependencies = (
+				93181DC62991BE75008B51C0 /* Alamofire */,
+			);
 			productName = DGSWchat;
 			productReference = 93181DA82991BCA6008B51C0 /* DGSWchat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 93181D9F2991BCA6008B51C0;
+			packageReferences = (
+				93181DC52991BE75008B51C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 93181DA92991BCA6008B51C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +271,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93181DAE2991BCA6008B51C0 /* ContentView.swift in Sources */,
+				93181DD62991C1A0008B51C0 /* SWField.swift in Sources */,
+				93181DD12991BF4B008B51C0 /* SWFont.swift in Sources */,
+				93181DCB2991BEA6008B51C0 /* LoginView.swift in Sources */,
+				93181DDF2991D01A008B51C0 /* LoginController.swift in Sources */,
+				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
+				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
+				93181DD92991C293008B51C0 /* ViewExt.swift in Sources */,
+				93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */,
+				93181DBC2991BD52008B51C0 /* SWColor.swift in Sources */,
+				93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */,
+				93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */,
+				93181DC12991BDF7008B51C0 /* LaunchView.swift in Sources */,
+				93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */,
 				93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */,
+				93181DE12991D020008B51C0 /* LaunchController.swift in Sources */,
+				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,11 +418,13 @@
 				DEVELOPMENT_TEAM = 56V747V83R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DGSWchat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +449,13 @@
 				DEVELOPMENT_TEAM = 56V747V83R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DGSWchat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93181DC52991BE75008B51C0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93181DC62991BE75008B51C0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93181DC52991BE75008B51C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93181DA02991BCA6008B51C0 /* Project object */;
 }
