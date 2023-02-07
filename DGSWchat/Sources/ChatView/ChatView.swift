@@ -11,8 +11,15 @@ import SwiftUI
 struct ChatView: View {
     
     /// Variables
-    @State var chats: [Chat] = dummydata
+    @State var chats: [Chat] = [Chat]()
     @State var input: String = ""
+    
+    // MARK: - Sending Chat
+    private func send() {
+        makeChat(message: input, isauthor: true)
+        input = ""
+        chats = getChat()
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -36,6 +43,7 @@ struct ChatView: View {
                     .padding(30)
                 }
                 .onAppear {
+                    chats = getChat()
                     value.scrollTo(chats.count - 1)
                 }
             }
@@ -47,9 +55,7 @@ struct ChatView: View {
                 Spacer()
                 
                 // MARK: - Send Button
-                Button(action: {
-                    
-                }) {
+                Button(action: send) {
                     Image("Send")
                         .renderingMode(.template)
                         .resizable()

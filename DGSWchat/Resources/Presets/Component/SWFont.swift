@@ -20,7 +20,7 @@ enum SWFont {
 extension SWFont {
     
     // MARK: - Font Definition
-    static let chat: Font  = makeFont(10, .regular)
+    static let chat: Font  = makeFont(8, .regular)
     static let body: Font  = makeFont(12, .regular)
     static let title: Font = makeFont(20, .semibold)
 }
