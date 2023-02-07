@@ -18,7 +18,9 @@ struct MainView: View {
     func createCell(idx: Int) -> some View {
         Group {
             if idx < datas.count {
-                NavigationLink(destination: PostView(data: datas[idx])) {
+                NavigationLink(destination: PostView(data: datas[idx])
+                    .navigationBarHidden(true))
+                {
                     MainCellView(data: datas[idx], bigCell: true)
                 }
             } else { Color.clear.frame(maxWidth: .infinity) }
@@ -29,7 +31,9 @@ struct MainView: View {
     func createSubCell(idx: Int, temp: Int) -> some View {
         Group {
             if idx + temp < datas.count {
-                NavigationLink(destination: PostView(data: datas[idx + temp])) {
+                NavigationLink(destination: PostView(data: datas[idx + temp])
+                    .navigationBarHidden(true))
+                {
                     MainCellView(data: datas[idx + temp])
                 }
             } else { Color.clear.frame(maxWidth: .infinity) }
@@ -185,6 +189,7 @@ struct MainView: View {
             }
             .onAppear(perform: initData)
         }
+        .navigationViewStyle(.stack)
     }
 }
 
