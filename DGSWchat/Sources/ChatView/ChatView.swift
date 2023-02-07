@@ -12,6 +12,7 @@ struct ChatView: View {
     
     /// Variables
     @State var chats: [Chat] = dummydata
+    @State var input: String = ""
     
     var body: some View {
         VStack(spacing: 0) {
@@ -38,9 +39,31 @@ struct ChatView: View {
                     value.scrollTo(chats.count - 1)
                 }
             }
+            
+            // MARK: - Chat Input
             HStack {
+                TextField("우리의 친구 소구에게 물어보세요.", text: $input)
+                    .font(SWFont.body)
+                Spacer()
                 
+                // MARK: - Send Button
+                Button(action: {
+                    
+                }) {
+                    Image("Send")
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(SWColor.gray)
+                }
             }
+            .padding(.vertical, 12)
+            .padding(.horizontal, 20)
+            .background(SWColor.lightgray)
+            .clipShape(Capsule())
+            .padding(.top, 5)
+            .padding(.bottom, 15)
+            .padding(.horizontal, 30)
         }
     }
 }
@@ -75,7 +98,7 @@ struct SingleChat: View {
                         .padding(.leading, 10)
                 }
                 SWLabel(chat.message)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 5)
                     .padding(.horizontal, 12)
                     .background(chat.isauthor ? SWColor.main3 : SWColor.main5)
                     .clipShape(RoundedRectangle(cornerRadius: 5))
