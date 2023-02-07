@@ -192,6 +192,9 @@ struct MainView: View {
                         }
                         .padding(.horizontal, 30)
                     }
+                    .refreshable {
+                        initData()
+                    }
                 }
                 
                 // MARK: - Plus Button

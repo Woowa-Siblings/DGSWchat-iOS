@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-// MARK: - Fetch Login Code
+// MARK: - Fetch Posts
 func getPosts(completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("\(api)/post/read-all",
                method: .get,

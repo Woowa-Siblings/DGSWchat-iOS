@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-// MARK: - Fetch DAuth Code
+// MARK: - Write Post
 func writePost(title: String, tag: String, content: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("\(api)/post/submit",
                method: .post,
@@ -21,7 +21,6 @@ func writePost(title: String, tag: String, content: String, completion: @escapin
     ) { $0.timeoutInterval = 5 }
         .validate()
         .responseData { response in
-            print(String(decoding: response.data!, as: UTF8.self))
             completion(response)
         }
 }

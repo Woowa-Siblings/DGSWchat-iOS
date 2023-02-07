@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct CommentData: Codable, Hashable {
+    let userId, postId, commentId, grade, room, number: Int
+    let userName, createDateTime, content: String
+}
