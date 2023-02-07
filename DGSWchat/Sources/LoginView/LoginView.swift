@@ -38,28 +38,46 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack {
             
-            // MARK: - Title
-            SWLabel("로그인")
-                .font(SWFont.title)
-                .padding(.bottom, 50)
-            
-            // MARK: - ID
-            SWField(text: $loginId)
-                .padding(.bottom, 30)
-            
-            // MARK: - Password
-            SWField(text: $loginPw, type: .secure)
-                .padding(.bottom, 30)
-            
-            // MARK: - Login Button
-            SWButton(action: startAuth, label: "로그인")
-                .elevation()
-        }
-        .padding(30)
-        .alert(isPresented: $error) {
-            Alert(title: Text("오류"), message: Text(errorMessage))
+            // MARK: - Login Background
+            VStack {
+                HStack {
+                    Spacer()
+                    Image("Background")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300)
+                        .foregroundColor(SWColor.main1)
+                    
+                }
+                Spacer()
+            }
+            .ignoresSafeArea()
+            VStack(alignment: .leading) {
+                
+                // MARK: - Title
+                SWLabel("로그인")
+                    .font(SWFont.title)
+                    .padding(.bottom, 50)
+                
+                // MARK: - ID
+                SWField(text: $loginId)
+                    .padding(.bottom, 30)
+                
+                // MARK: - Password
+                SWField(text: $loginPw, type: .secure)
+                    .padding(.bottom, 30)
+                
+                // MARK: - Login Button
+                SWButton(action: startAuth, label: "로그인")
+                    .elevation()
+            }
+            .padding(30)
+            .alert(isPresented: $error) {
+                Alert(title: Text("오류"), message: Text(errorMessage))
+            }
         }
     }
 }
