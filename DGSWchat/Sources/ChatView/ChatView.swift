@@ -38,56 +38,58 @@ struct ChatView: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollViewReader { value in
-                
-                // MARK: - Chat Scroll View
-                ScrollView {
-                    ForEach(0..<chats.count, id: \.self) { idx in
-                        
-                        // MARK: - Chat Cell
-                        SingleChat(chat: chats[idx])
-                            .id(idx)
-                            .onChange(of: chats.count) { _ in
-                                withAnimation(.default) {
-                                    value.scrollTo(chats.count - 1)
+        SWView(title: "소구") {
+            VStack(spacing: 0) {
+                ScrollViewReader { value in
+                    
+                    // MARK: - Chat Scroll View
+                    ScrollView {
+                        ForEach(0..<chats.count, id: \.self) { idx in
+                            
+                            // MARK: - Chat Cell
+                            SingleChat(chat: chats[idx])
+                                .id(idx)
+                                .onChange(of: chats.count) { _ in
+                                    withAnimation(.default) {
+                                        value.scrollTo(chats.count - 1)
+                                    }
                                 }
-                            }
-                            .onAppear {
-                                withAnimation(.default) {
-                                    value.scrollTo(chats.count - 1)
+                                .onAppear {
+                                    withAnimation(.default) {
+                                        value.scrollTo(chats.count - 1)
+                                    }
                                 }
-                            }
+                        }
+                        .padding(30)
                     }
-                    .padding(30)
+                    .onAppear {
+                        chats = getChat()
+                    }
                 }
-                .onAppear {
-                    chats = getChat()
-                }
-            }
-            
-            // MARK: - Chat Input
-            HStack {
-                TextField("우리의 친구 소구에게 물어보세요.", text: $input)
-                    .font(SWFont.body)
-                Spacer()
                 
-                // MARK: - Send Button
-                Button(action: send) {
-                    Image("Send")
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(SWColor.gray)
+                // MARK: - Chat Input
+                HStack {
+                    TextField("우리의 친구 소구에게 물어보세요.", text: $input)
+                        .font(SWFont.body)
+                    Spacer()
+                    
+                    // MARK: - Send Button
+                    Button(action: send) {
+                        Image("Send")
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(SWColor.gray)
+                    }
                 }
+                .padding(.vertical, 12)
+                .padding(.horizontal, 20)
+                .background(SWColor.lightgray)
+                .clipShape(Capsule())
+                .padding(.top, 5)
+                .padding(.bottom, 15)
+                .padding(.horizontal, 30)
             }
-            .padding(.vertical, 12)
-            .padding(.horizontal, 20)
-            .background(SWColor.lightgray)
-            .clipShape(Capsule())
-            .padding(.top, 5)
-            .padding(.bottom, 15)
-            .padding(.horizontal, 30)
         }
     }
 }
@@ -113,7 +115,6 @@ struct SingleChat: View {
                 SWLabel(dateFormatter(chat.time))
                     .color(SWColor.gray)
             }
-            
             VStack(alignment: .leading, spacing: 0) {
                 if !chat.isauthor {
                     Image("Sogu")
@@ -137,7 +138,7 @@ struct SingleChat: View {
             }
         }
         .padding(.bottom, chat.isauthor ? 0 : 15)
-        .transition(.move(edge: chat.isauthor ? .trailing : .leading))
+        .transition(.move(edge: .bottom).combined(with: .opacity))
     }
 }
 

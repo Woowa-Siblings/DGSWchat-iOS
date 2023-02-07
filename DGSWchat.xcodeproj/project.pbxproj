@@ -14,14 +14,14 @@
 		93181DC12991BDF7008B51C0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC02991BDF7008B51C0 /* LaunchView.swift */; };
 		93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC32991BE3D008B51C0 /* Interceptor.swift */; };
 		93181DC72991BE75008B51C0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 93181DC62991BE75008B51C0 /* Alamofire */; };
-		93181DCB2991BEA6008B51C0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DCA2991BEA6008B51C0 /* LoginView.swift */; };
+		93181DCB2991BEA6008B51C0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DCA2991BEA6008B51C0 /* OnboardingView.swift */; };
 		93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DCD2991BEF5008B51C0 /* SWButton.swift */; };
 		93181DD12991BF4B008B51C0 /* SWFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD02991BF4B008B51C0 /* SWFont.swift */; };
 		93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD32991BF95008B51C0 /* SWLabel.swift */; };
 		93181DD62991C1A0008B51C0 /* SWField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD52991C1A0008B51C0 /* SWField.swift */; };
 		93181DD92991C293008B51C0 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD82991C293008B51C0 /* ViewExt.swift */; };
 		93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDB2991CFB2008B51C0 /* Constants.swift */; };
-		93181DDF2991D01A008B51C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDE2991D01A008B51C0 /* LoginController.swift */; };
+		93181DDF2991D01A008B51C0 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDE2991D01A008B51C0 /* OnboardingController.swift */; };
 		93181DE12991D020008B51C0 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE02991D020008B51C0 /* LaunchController.swift */; };
 		93181DE32991D0B7008B51C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE22991D0B7008B51C0 /* Response.swift */; };
 		93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE42991D0E0008B51C0 /* TokenManager.swift */; };
@@ -30,8 +30,10 @@
 		9337AD402991D2DE00449466 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD3F2991D2DE00449466 /* ChatController.swift */; };
 		9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD412991D2E300449466 /* ChatDataManager.swift */; };
 		9337AD452991D6D000449466 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD442991D6D000449466 /* ChatData.swift */; };
-		937989502991F5620093A42A /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379894F2991F5620093A42A /* LoginData.swift */; };
+		937989502991F5620093A42A /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379894F2991F5620093A42A /* OnboardingData.swift */; };
 		9379895229920BAC0093A42A /* TransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895129920BAC0093A42A /* TransitionExt.swift */; };
+		93798955299229BD0093A42A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798954299229BD0093A42A /* StringExt.swift */; };
+		93798957299230600093A42A /* SWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798956299230600093A42A /* SWView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +44,7 @@
 		93181DBB2991BD52008B51C0 /* SWColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWColor.swift; sourceTree = "<group>"; };
 		93181DC02991BDF7008B51C0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		93181DC32991BE3D008B51C0 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
-		93181DCA2991BEA6008B51C0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93181DCA2991BEA6008B51C0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		93181DCD2991BEF5008B51C0 /* SWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWButton.swift; sourceTree = "<group>"; };
 		93181DD02991BF4B008B51C0 /* SWFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWFont.swift; sourceTree = "<group>"; };
 		93181DD32991BF95008B51C0 /* SWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWLabel.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		93181DDA2991CB63008B51C0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		93181DDB2991CFB2008B51C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		93181DDD2991CFE8008B51C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		93181DDE2991D01A008B51C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		93181DDE2991D01A008B51C0 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		93181DE02991D020008B51C0 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		93181DE22991D0B7008B51C0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		93181DE42991D0E0008B51C0 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
@@ -59,8 +61,10 @@
 		9337AD3F2991D2DE00449466 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		9337AD412991D2E300449466 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
 		9337AD442991D6D000449466 /* ChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
-		9379894F2991F5620093A42A /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		9379894F2991F5620093A42A /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		9379895129920BAC0093A42A /* TransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExt.swift; sourceTree = "<group>"; };
+		93798954299229BD0093A42A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		93798956299230600093A42A /* SWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				93181DBF2991BDF2008B51C0 /* LaunchView */,
+				93181DC92991BE9E008B51C0 /* OnboardingView */,
 				93181DC82991BE97008B51C0 /* MainView */,
-				93181DC92991BE9E008B51C0 /* LoginView */,
 				93181DE92991D296008B51C0 /* ChatView */,
 			);
 			path = Sources;
@@ -173,14 +177,14 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		93181DC92991BE9E008B51C0 /* LoginView */ = {
+		93181DC92991BE9E008B51C0 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
-				93181DCA2991BEA6008B51C0 /* LoginView.swift */,
-				93181DDE2991D01A008B51C0 /* LoginController.swift */,
-				9379894F2991F5620093A42A /* LoginData.swift */,
+				93181DCA2991BEA6008B51C0 /* OnboardingView.swift */,
+				93181DDE2991D01A008B51C0 /* OnboardingController.swift */,
+				9379894F2991F5620093A42A /* OnboardingData.swift */,
 			);
-			path = LoginView;
+			path = OnboardingView;
 			sourceTree = "<group>";
 		};
 		93181DCC2991BEE6008B51C0 /* View */ = {
@@ -189,6 +193,7 @@
 				93181DD52991C1A0008B51C0 /* SWField.swift */,
 				93181DCD2991BEF5008B51C0 /* SWButton.swift */,
 				93181DD32991BF95008B51C0 /* SWLabel.swift */,
+				93798956299230600093A42A /* SWView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			children = (
 				93181DD82991C293008B51C0 /* ViewExt.swift */,
 				9379895129920BAC0093A42A /* TransitionExt.swift */,
+				93798954299229BD0093A42A /* StringExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,15 +305,17 @@
 			files = (
 				93181DD62991C1A0008B51C0 /* SWField.swift in Sources */,
 				93181DD12991BF4B008B51C0 /* SWFont.swift in Sources */,
-				937989502991F5620093A42A /* LoginData.swift in Sources */,
-				93181DCB2991BEA6008B51C0 /* LoginView.swift in Sources */,
+				937989502991F5620093A42A /* OnboardingData.swift in Sources */,
+				93181DCB2991BEA6008B51C0 /* OnboardingView.swift in Sources */,
+				93798957299230600093A42A /* SWView.swift in Sources */,
 				9337AD452991D6D000449466 /* ChatData.swift in Sources */,
-				93181DDF2991D01A008B51C0 /* LoginController.swift in Sources */,
+				93181DDF2991D01A008B51C0 /* OnboardingController.swift in Sources */,
 				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
 				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
 				93181DD92991C293008B51C0 /* ViewExt.swift in Sources */,
 				9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */,
 				93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */,
+				93798955299229BD0093A42A /* StringExt.swift in Sources */,
 				93181DBC2991BD52008B51C0 /* SWColor.swift in Sources */,
 				93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */,
 				93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */,
