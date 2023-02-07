@@ -17,8 +17,24 @@ struct ChatView: View {
     // MARK: - Sending Chat
     private func send() {
         makeChat(message: input, isauthor: true)
-        input = ""
-        chats = getChat()
+        sendMessage(message: input) { response in
+            switch response.result {
+            case .success:
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(ChatData.self, from: value) else { return }
+                var final = result.result.text
+                if [".", "?", "!", ",", "요"].contains(final.first) {
+                    final = String(final.dropFirst())
+                }
+                makeChat(message: final, isauthor: false)
+            case .failure:
+                print("실패")
+            }
+            input = ""
+            withAnimation(.default) {
+                chats = getChat()
+            }
+        }
     }
     
     var body: some View {
@@ -33,7 +49,12 @@ struct ChatView: View {
                             // MARK: - Chat Cell
                             SingleChat(chat: chats[idx])
                                 .id(idx)
-                                .onChange(of: chats) { _ in
+                                .onChange(of: chats.count) { _ in
+                                    withAnimation(.default) {
+                                        value.scrollTo(chats.count - 1)
+                                    }
+                                }
+                                .onAppear {
                                     withAnimation(.default) {
                                         value.scrollTo(chats.count - 1)
                                     }
@@ -44,7 +65,6 @@ struct ChatView: View {
                 }
                 .onAppear {
                     chats = getChat()
-                    value.scrollTo(chats.count - 1)
                 }
             }
             
@@ -117,6 +137,7 @@ struct SingleChat: View {
             }
         }
         .padding(.bottom, chat.isauthor ? 0 : 15)
+        .transition(.move(edge: chat.isauthor ? .trailing : .leading))
     }
 }
 
