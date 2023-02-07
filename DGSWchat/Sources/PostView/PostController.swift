@@ -21,7 +21,6 @@ func getPost(id: Int, completion: @escaping (AFDataResponse<Data>) -> Void) {
         }
 }
 
-
 // MARK: - Fetch Comments
 func getComments(id: Int, completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("\(api)/comment/read/\(id)",

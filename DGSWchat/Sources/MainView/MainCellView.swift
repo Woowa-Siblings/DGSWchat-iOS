@@ -49,6 +49,7 @@ struct MainCellView: View {
                     .padding(.bottom, 3)
                 Text(data.content)
                     .lineLimit(3)
+                    .multilineTextAlignment(.leading)
                     .font(SWFont.mid)
                 Spacer()
             }

@@ -40,6 +40,9 @@ struct PostView: View {
     }
     
     func fetchComments() {
+        if data.tag.isEmpty {
+            refresh()
+        }
         getComments(id: data.postId) { response in
             switch response.result {
             case .success:
@@ -118,27 +121,29 @@ struct PostView: View {
                         .elevation()
                         .padding(.bottom, 20)
                         
-                        ForEach(comments, id: \.self) { comment in
-                            VStack(alignment: .leading, spacing: 5) {
-                                HStack(alignment: .bottom, spacing: 3) {
-                                    SWLabel(comment.userName)
-                                        .font(SWFont.nav)
-                                    SWLabel("\(comment.grade)학년 \(comment.room)반 \(comment.number)번")
-                                        .font(SWFont.chat)
-                                        .color(SWColor.gray)
-                                }
-                                .padding(.leading, 10)
-                                
-                                HStack(alignment: .bottom, spacing: 8) {
-                                    SWLabel(comment.content)
-                                        .font(SWFont.mid)
-                                        .padding(.vertical, 6)
-                                        .padding(.horizontal, 12)
-                                        .background(SWColor.main5)
-                                        .cornerRadius(5, corners: [.topRight, .bottomLeft, .bottomRight])
-                                    SWLabel(timeParser(comment.createDateTime))
-                                        .font(SWFont.cmt)
-                                        .color(SWColor.gray)
+                        VStack(alignment: .leading, spacing: 15) {
+                            ForEach(comments, id: \.self) { comment in
+                                VStack(alignment: .leading, spacing: 5) {
+                                    HStack(alignment: .bottom, spacing: 3) {
+                                        SWLabel(comment.userName)
+                                            .font(SWFont.nav)
+                                        SWLabel("\(comment.grade)학년 \(comment.room)반 \(comment.number)번")
+                                            .font(SWFont.chat)
+                                            .color(SWColor.gray)
+                                    }
+                                    .padding(.leading, 10)
+                                    
+                                    HStack(alignment: .bottom, spacing: 8) {
+                                        SWLabel(comment.content)
+                                            .font(SWFont.mid)
+                                            .padding(.vertical, 6)
+                                            .padding(.horizontal, 12)
+                                            .background(SWColor.main5)
+                                            .cornerRadius(5, corners: [.topRight, .bottomLeft, .bottomRight])
+                                        SWLabel(timeParser(comment.createDateTime))
+                                            .font(SWFont.cmt)
+                                            .color(SWColor.gray)
+                                    }
                                 }
                             }
                         }

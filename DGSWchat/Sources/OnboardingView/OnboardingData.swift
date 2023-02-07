@@ -8,9 +8,7 @@
 import Foundation
 
 struct CodeData: Codable {
-    var status: Int
-    var message: String
-    var data: String
+    let authCode: String
 }
 
 struct AuthData: Codable {

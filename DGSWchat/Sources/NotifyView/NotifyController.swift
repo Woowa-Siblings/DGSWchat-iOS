@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+// MARK: - Check Notification
 func checkNotify(completion: @escaping (Bool) -> Void) {
     AF.request("\(api)/notice/check",
                method: .get,
@@ -25,5 +26,19 @@ func checkNotify(completion: @escaping (Bool) -> Void) {
             case .failure:
                 completion(false)
             }
+        }
+}
+
+// MARK: - Fetch Notification
+func fetchNotify(completion: @escaping (AFDataResponse<Data>) -> Void) {
+    AF.request("\(api)/notice/list",
+               method: .get,
+               encoding: URLEncoding.default,
+               headers: ["Content-Type": "application/json"],
+               interceptor: Interceptor()
+    ) { $0.timeoutInterval = 5 }
+        .validate()
+        .responseData { response in
+            completion(response)
         }
 }

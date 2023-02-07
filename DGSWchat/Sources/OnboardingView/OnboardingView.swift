@@ -39,6 +39,7 @@ struct OnboardingView: View {
     // MARK: - Start Login
     func startAuth() {
         login(loginId: loginId, loginPw: loginPw) { response in
+            print(String(decoding: response.data!, as: UTF8.self))
             switch response.result {
             case .success:
                 fetchAuth(code: decodeCode(response)) { response in
@@ -83,6 +84,7 @@ struct OnboardingView: View {
                     loginPw = registerPw
                     startAuth()
                 case .failure:
+                    print(String(decoding: response.data!, as: UTF8.self))
                     errorMessage = "회원가입에 실패했습니다"
                     error.toggle()
                 }

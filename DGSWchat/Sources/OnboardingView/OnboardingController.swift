@@ -27,8 +27,8 @@ func login(loginId: String, loginPw: String, completion: @escaping (AFDataRespon
 
 // MARK: - Decode DAuth Code
 func decodeCode(_ response: AFDataResponse<Data>) -> String {
-    let result = try! JSONDecoder().decode(CodeData.self, from: response.value!)
-    return result.data
+    let result = try! JSONDecoder().decode(Response<CodeData>.self, from: response.value!)
+    return result.data.authCode
 }
 
 // MARK: - Start Auth
