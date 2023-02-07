@@ -116,10 +116,11 @@ struct SingleChat: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 if !chat.isauthor {
-                    Image("Person")
+                    Image("Sogu")
                         .resizable()
+                        .scaledToFit()
                         .frame(width: 20, height: 20)
-                        .padding(.leading, 10)
+                        .padding(.leading, 5)
                 }
                 SWLabel(chat.message)
                     .makeSelectable()

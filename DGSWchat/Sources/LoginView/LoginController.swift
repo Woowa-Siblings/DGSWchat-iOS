@@ -16,7 +16,7 @@ func fetchCode(loginId: String, loginPw: String, completion: @escaping (AFDataRe
                parameters: ["id": loginId, "pw":
                                 SHA512.hash(data: loginPw.data(using: .utf8)!)
                 .compactMap{ String(format: "%02x", $0) }.joined(),
-                            "clientId": "39bc523458c14eb987b7b16175426a31a9f105b7f5814f1f9eca7d454bd23c73",
+                            "clientId": "1e44744df8d3440faaeb222981f43fe366ff9d9447a245a2b44a78f322f95cc5",
                             "redirectUrl": "http://localhost:3000/callback",
                             "state": "null"
                            ],

@@ -46,6 +46,7 @@ struct LaunchView: View {
         // MARK: - Login View
         else if screenState == 1 {
             LoginView(screenState: $screenState)
+                .transition(.backslide)
         }
         
         // MARK: - Main View

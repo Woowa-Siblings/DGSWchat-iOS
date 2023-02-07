@@ -7,4 +7,4 @@
 
 import Foundation
 
-public let api = "http://192.168.159.154/"
+public let api = "http://192.168.34.154:8080"

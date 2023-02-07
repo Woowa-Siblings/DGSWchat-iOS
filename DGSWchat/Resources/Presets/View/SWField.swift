@@ -20,6 +20,8 @@ struct SWField: View {
     
     /// Variables
     @FocusState private var focus: Bool
+    let placeholder: String
+    let icon: String
     var type: FieldType?
     
     public var body: some View {
@@ -31,7 +33,7 @@ struct SWField: View {
             HStack(spacing: 10) {
                 
                 // MARK: - Placeholder Image
-                Image(type == .secure ? "Lock" : "Person")
+                Image(icon)
                     .renderingMode(.template)
                     .resizable()
                     .frame(width: 14, height: 14)
@@ -40,10 +42,10 @@ struct SWField: View {
                 // MARK: - Text Field
                 switch(type) {
                 case .secure:
-                    SecureField("비밀번호를 입력하세요.", text: $text)
+                    SecureField(placeholder, text: $text)
                         .focused($focus)
                 default:
-                    TextField("아이디를 입력하세요.", text: $text)
+                    TextField(placeholder, text: $text)
                         .focused($focus)
                         .autocapitalization(.none)
                 }
