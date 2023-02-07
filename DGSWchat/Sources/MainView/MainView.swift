@@ -13,6 +13,7 @@ struct MainView: View {
     /// Variables
     @State private var searchText: String = ""
     @State private var datas: [PostData] = [PostData]()
+    @State private var isNotification: Bool = true
     
     // MARK: - Creates Cell
     func createCell(idx: Int) -> some View {
@@ -41,6 +42,9 @@ struct MainView: View {
     }
     
     func initData() {
+        checkNotify() { status in
+            isNotification = status
+        }
         getPosts() { response in
             switch response.result {
             case .success:
@@ -85,7 +89,7 @@ struct MainView: View {
                                 Image("Search")
                                     .renderingMode(.template)
                                     .resizable()
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 16, height: 16)
                                     .foregroundColor(SWColor.main1)
                             }
                         }
@@ -93,6 +97,26 @@ struct MainView: View {
                         .padding(.horizontal, 20)
                         .background(SWColor.lightgray)
                         .clipShape(Capsule())
+                        
+                        // MARK: - Notify
+                        NavigationLink(destination: NotifyView()
+                            .onAppear {
+                                isNotification = false
+                            }
+                            .navigationBarHidden(true)) {
+                                ZStack(alignment: .topTrailing) {
+                                    Image("Bell")
+                                        .renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(SWColor.gray)
+                                    if isNotification {
+                                        Circle()
+                                            .fill(SWColor.main1)
+                                            .frame(width: 4, height: 4)
+                                    }
+                                }
+                            }
                     }
                     .padding(.top, 10)
                     .padding(.bottom, 20)
@@ -172,7 +196,8 @@ struct MainView: View {
                 
                 // MARK: - Plus Button
                 NavigationLink(destination: WriteView()
-                    .navigationBarHidden(true))
+                    .navigationBarHidden(true)
+                    .onDisappear(perform: initData))
                 {
                     Image("Plus")
                         .renderingMode(.template)
@@ -188,6 +213,11 @@ struct MainView: View {
                 .elevation()
             }
             .onAppear(perform: initData)
+            .onTapGesture {
+                checkNotify() { status in
+                    isNotification = status
+                }
+            }
         }
         .navigationViewStyle(.stack)
     }

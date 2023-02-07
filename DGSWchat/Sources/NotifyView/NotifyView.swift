@@ -9,7 +9,11 @@ import SwiftUI
 
 struct NotifyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        SWView(title: "알림") {
+            ScrollView {
+                
+            }
+        }
     }
 }
 
