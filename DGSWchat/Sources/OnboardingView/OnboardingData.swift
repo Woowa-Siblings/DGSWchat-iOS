@@ -8,9 +8,9 @@
 import Foundation
 
 struct CodeData: Codable {
-    let name: String
-    let profileImage: String?
-    let location: String
+    var status: Int
+    var message: String
+    var data: String
 }
 
 struct AuthData: Codable {

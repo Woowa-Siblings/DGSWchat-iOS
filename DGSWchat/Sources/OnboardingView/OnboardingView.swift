@@ -39,21 +39,19 @@ struct OnboardingView: View {
         login(loginId: loginId, loginPw: loginPw) { response in
             switch response.result {
             case .success:
-                completeAuth(response)
-//                print(decodeCode(response))
-//                fetchAuth(code: decodeCode(response)) { response in
-//                    print(String(decoding: response.data!, as: UTF8.self))
-//                    switch response.result {
-//                    case .success:
-//                        completeAuth(response)
-//                        withAnimation(.default) {
-//                            screenState = 2
-//                        }
-//                    case .failure:
-//                        errorMessage = "서버에 연결할 수 없습니다"
-//                        error.toggle()
-//                    }
-//                }
+                fetchAuth(code: decodeCode(response)) { response in
+                    print(String(decoding: response.data!, as: UTF8.self))
+                    switch response.result {
+                    case .success:
+                        completeAuth(response)
+                        withAnimation(.default) {
+                            screenState = 2
+                        }
+                    case .failure:
+                        errorMessage = "서버에 연결할 수 없습니다"
+                        error.toggle()
+                    }
+                }
             case .failure:
                 errorMessage = "ID 또는 비밀번호가 틀렸습니다"
                 error.toggle()
