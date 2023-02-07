@@ -8,24 +8,24 @@
 import SwiftUI
 
 // MARK: - Custom Label of DGSWchat
-public struct SWLabel: View {
+struct SWLabel: View {
     
     /// Variables
-    public let text: String
-    public var color: Color
-    public var font: Font
+    let text: String
+    var color: Color
+    var font: Font
     
     /// Initializer
-    public init(_ text: String,
-                color: Color = SWColor.label,
-                font: Font = SWFont.body)
+    init(_ text: String,
+         color: Color = SWColor.label,
+         font: Font = SWFont.body)
     {
         self.text = text
         self.color = color
         self.font = font
     }
     
-    public var body: some View {
+    var body: some View {
         
         // MARK: - Main Text
         Text(text)
@@ -38,14 +38,14 @@ public struct SWLabel: View {
 extension SWLabel {
     
     // MARK: - Color Function
-    public func color(_ color: Color) -> SWLabel {
+    func color(_ color: Color) -> SWLabel {
         SWLabel(self.text,
                 color: color,
                 font: self.font)
     }
     
     // MARK: - Font Function
-    public func font(_ font: Font) -> SWLabel {
+    func font(_ font: Font) -> SWLabel {
         SWLabel(self.text,
                 color: self.color,
                 font: font)

@@ -8,10 +8,10 @@
 import SwiftUI
 
 // MARK: - Color Collection of DGSWchat
-public enum SWColor {
+enum SWColor {
     
     // MARK: - Makes Hexcode to UIColor
-    public static func hexToColor(hex: String) -> UIColor {
+    static func hexToColor(hex: String) -> UIColor {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
         Scanner(string: hex).scanHexInt64(&int)
@@ -22,7 +22,7 @@ public enum SWColor {
     }
     
     // MARK: - Makes Two Hexcodes to Color
-    public static func dynamicColor(_ light: String, dark: String? = nil) -> Color {
+    static func dynamicColor(_ light: String, dark: String? = nil) -> Color {
         let lightColor = hexToColor(hex: light)
         if dark == nil {
             return Color(lightColor)
@@ -37,11 +37,11 @@ public enum SWColor {
 extension SWColor {
     
     // MARK: - Color Definition
-    public static let main1: Color  = dynamicColor("#3D52E3")
-    public static let main2: Color  = dynamicColor("#3888FF")
-    public static let main3: Color  = dynamicColor("#C3CAFF")
-    public static let main4: Color  = dynamicColor("#EBF3FE")
-    public static let gray: Color   = dynamicColor("#A3A3A3")
-    public static let label: Color  = dynamicColor("#000000", dark: "#FFFFFF")
-    public static let shadow: Color = dynamicColor("#b7b7b7", dark: "#000000")
+    static let main1: Color  = dynamicColor("#3D52E3")
+    static let main2: Color  = dynamicColor("#3888FF")
+    static let main3: Color  = dynamicColor("#C3CAFF")
+    static let main4: Color  = dynamicColor("#EBF3FE")
+    static let gray: Color   = dynamicColor("#A3A3A3")
+    static let label: Color  = dynamicColor("#000000", dark: "#FFFFFF")
+    static let shadow: Color = dynamicColor("#b7b7b7", dark: "#000000")
 }

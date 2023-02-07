@@ -8,24 +8,24 @@
 import SwiftUI
 
 // MARK: - Large Button of DGSWchat
-public struct SWButton: View {
+struct SWButton: View {
     
     /// Variables
-    public let action: () -> Void
-    public let label: String
-    public var disabled: Bool = false
+    let action: () -> Void
+    let label: String
+    var disabled: Bool = false
     
     /// Initializer
-    public init(action: @escaping () -> Void,
-                label: String,
-                disabled: Bool = false)
+    init(action: @escaping () -> Void,
+         label: String,
+         disabled: Bool = false)
     {
         self.action = action
         self.label = label
         self.disabled = disabled
     }
     
-    public var body: some View {
+    var body: some View {
         
         // MARK: - Main Button
         Button(action: action) {
@@ -45,7 +45,7 @@ public struct SWButton: View {
 extension SWButton {
     
     // MARK: - Disabled Function
-    public func disabled(_ disabled: Bool) -> SWButton {
+    func disabled(_ disabled: Bool) -> SWButton {
         SWButton(action: self.action,
                  label: self.label,
                  disabled: disabled)

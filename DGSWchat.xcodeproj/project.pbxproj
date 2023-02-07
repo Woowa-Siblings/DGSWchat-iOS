@@ -10,7 +10,6 @@
 		93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */; };
 		93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DAD2991BCA6008B51C0 /* MainView.swift */; };
 		93181DB02991BCA7008B51C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93181DAF2991BCA7008B51C0 /* Assets.xcassets */; };
-		93181DB32991BCA7008B51C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */; };
 		93181DBC2991BD52008B51C0 /* SWColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DBB2991BD52008B51C0 /* SWColor.swift */; };
 		93181DC12991BDF7008B51C0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC02991BDF7008B51C0 /* LaunchView.swift */; };
 		93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DC32991BE3D008B51C0 /* Interceptor.swift */; };
@@ -26,6 +25,10 @@
 		93181DE12991D020008B51C0 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE02991D020008B51C0 /* LaunchController.swift */; };
 		93181DE32991D0B7008B51C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE22991D0B7008B51C0 /* Response.swift */; };
 		93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE42991D0E0008B51C0 /* TokenManager.swift */; };
+		93181DE82991D286008B51C0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93181DE72991D286008B51C0 /* RealmSwift */; };
+		93181DEB2991D29C008B51C0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DEA2991D29C008B51C0 /* ChatView.swift */; };
+		9337AD402991D2DE00449466 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD3F2991D2DE00449466 /* ChatController.swift */; };
+		9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD412991D2E300449466 /* ChatDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,6 @@
 		93181DAB2991BCA6008B51C0 /* DGSWchatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGSWchatApp.swift; sourceTree = "<group>"; };
 		93181DAD2991BCA6008B51C0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93181DAF2991BCA7008B51C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93181DBB2991BD52008B51C0 /* SWColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWColor.swift; sourceTree = "<group>"; };
 		93181DC02991BDF7008B51C0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		93181DC32991BE3D008B51C0 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
@@ -50,6 +52,9 @@
 		93181DE02991D020008B51C0 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		93181DE22991D0B7008B51C0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		93181DE42991D0E0008B51C0 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		93181DEA2991D29C008B51C0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		9337AD3F2991D2DE00449466 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		9337AD412991D2E300449466 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93181DE82991D286008B51C0 /* RealmSwift in Frameworks */,
 				93181DC72991BE75008B51C0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,17 +93,9 @@
 				93181DDD2991CFE8008B51C0 /* Info.plist */,
 				93181DBE2991BDD6008B51C0 /* Resources */,
 				93181DBD2991BDD0008B51C0 /* Sources */,
-				93181DB12991BCA7008B51C0 /* Preview Content */,
+				9337AD432991D31A00449466 /* Preview Content */,
 			);
 			path = DGSWchat;
-			sourceTree = "<group>";
-		};
-		93181DB12991BCA7008B51C0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				93181DB22991BCA7008B51C0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		93181DB92991BD3C008B51C0 /* Presets */ = {
@@ -126,6 +124,7 @@
 				93181DBF2991BDF2008B51C0 /* LaunchView */,
 				93181DC82991BE97008B51C0 /* MainView */,
 				93181DC92991BE9E008B51C0 /* LoginView */,
+				93181DE92991D296008B51C0 /* ChatView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -195,6 +194,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		93181DE92991D296008B51C0 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				93181DEA2991D29C008B51C0 /* ChatView.swift */,
+				9337AD3F2991D2DE00449466 /* ChatController.swift */,
+				9337AD412991D2E300449466 /* ChatDataManager.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		9337AD432991D31A00449466 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +229,7 @@
 			name = DGSWchat;
 			packageProductDependencies = (
 				93181DC62991BE75008B51C0 /* Alamofire */,
+				93181DE72991D286008B51C0 /* RealmSwift */,
 			);
 			productName = DGSWchat;
 			productReference = 93181DA82991BCA6008B51C0 /* DGSWchat.app */;
@@ -244,6 +261,7 @@
 			mainGroup = 93181D9F2991BCA6008B51C0;
 			packageReferences = (
 				93181DC52991BE75008B51C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				93181DE62991D286008B51C0 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 93181DA92991BCA6008B51C0 /* Products */;
 			projectDirPath = "";
@@ -259,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93181DB32991BCA7008B51C0 /* Preview Assets.xcassets in Resources */,
 				93181DB02991BCA7008B51C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,15 +295,18 @@
 				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
 				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
 				93181DD92991C293008B51C0 /* ViewExt.swift in Sources */,
+				9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */,
 				93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */,
 				93181DBC2991BD52008B51C0 /* SWColor.swift in Sources */,
 				93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */,
 				93181DC42991BE3D008B51C0 /* Interceptor.swift in Sources */,
 				93181DC12991BDF7008B51C0 /* LaunchView.swift in Sources */,
+				93181DEB2991D29C008B51C0 /* ChatView.swift in Sources */,
 				93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */,
 				93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */,
 				93181DE12991D020008B51C0 /* LaunchController.swift in Sources */,
 				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
+				9337AD402991D2DE00449466 /* ChatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +521,14 @@
 				kind = branch;
 			};
 		};
+		93181DE62991D286008B51C0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -508,6 +536,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93181DC52991BE75008B51C0 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		93181DE72991D286008B51C0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93181DE62991D286008B51C0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

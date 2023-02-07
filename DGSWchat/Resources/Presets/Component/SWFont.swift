@@ -8,10 +8,10 @@
 import SwiftUI
 
 // MARK: - Font Collection of DGSWchat
-public enum SWFont {
+enum SWFont {
 
     // MARK: - Assembles Size and Weight to Font
-    public static func makeFont(_ size: CGFloat, _ weight: Font.Weight) -> Font {
+    static func makeFont(_ size: CGFloat, _ weight: Font.Weight) -> Font {
         return .system(size: size).weight(weight)
     }
 }
@@ -20,6 +20,6 @@ public enum SWFont {
 extension SWFont {
     
     // MARK: - Font Definition
-    public static let body: Font  = makeFont(12, .regular)
-    public static let title: Font = makeFont(20, .semibold)
+    static let body: Font  = makeFont(12, .regular)
+    static let title: Font = makeFont(20, .semibold)
 }
