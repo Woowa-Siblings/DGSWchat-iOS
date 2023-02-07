@@ -41,6 +41,7 @@ extension SWColor {
     static let main2: Color  = dynamicColor("#3888FF")
     static let main3: Color  = dynamicColor("#C3CAFF")
     static let main4: Color  = dynamicColor("#EBF3FE")
+    static let main5: Color  = dynamicColor("#F2F6FF")
     static let gray: Color   = dynamicColor("#A3A3A3")
     static let label: Color  = dynamicColor("#000000", dark: "#FFFFFF")
     static let shadow: Color = dynamicColor("#b7b7b7", dark: "#000000")

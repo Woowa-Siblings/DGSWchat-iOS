@@ -29,6 +29,7 @@
 		93181DEB2991D29C008B51C0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DEA2991D29C008B51C0 /* ChatView.swift */; };
 		9337AD402991D2DE00449466 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD3F2991D2DE00449466 /* ChatController.swift */; };
 		9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD412991D2E300449466 /* ChatDataManager.swift */; };
+		9337AD452991D6D000449466 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD442991D6D000449466 /* ChatData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		93181DEA2991D29C008B51C0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		9337AD3F2991D2DE00449466 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		9337AD412991D2E300449466 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
+		9337AD442991D6D000449466 /* ChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				93181DEA2991D29C008B51C0 /* ChatView.swift */,
 				9337AD3F2991D2DE00449466 /* ChatController.swift */,
+				9337AD442991D6D000449466 /* ChatData.swift */,
 				9337AD412991D2E300449466 /* ChatDataManager.swift */,
 			);
 			path = ChatView;
@@ -291,6 +294,7 @@
 				93181DD62991C1A0008B51C0 /* SWField.swift in Sources */,
 				93181DD12991BF4B008B51C0 /* SWFont.swift in Sources */,
 				93181DCB2991BEA6008B51C0 /* LoginView.swift in Sources */,
+				9337AD452991D6D000449466 /* ChatData.swift in Sources */,
 				93181DDF2991D01A008B51C0 /* LoginController.swift in Sources */,
 				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
 				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
