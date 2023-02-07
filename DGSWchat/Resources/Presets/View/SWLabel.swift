@@ -14,15 +14,18 @@ struct SWLabel: View {
     let text: String
     var color: Color
     var font: Font
+    var selectable: Bool
     
     /// Initializer
     init(_ text: String,
          color: Color = SWColor.label,
-         font: Font = SWFont.body)
+         font: Font = SWFont.body,
+         selectable: Bool = false)
     {
         self.text = text
         self.color = color
         self.font = font
+        self.selectable = selectable
     }
     
     var body: some View {
@@ -31,6 +34,9 @@ struct SWLabel: View {
         Text(text)
             .foregroundColor(color)
             .font(font)
+            .if(selectable) {
+                $0.textSelection(.enabled)
+            }
     }
 }
 
@@ -41,13 +47,23 @@ extension SWLabel {
     func color(_ color: Color) -> SWLabel {
         SWLabel(self.text,
                 color: color,
-                font: self.font)
+                font: self.font,
+                selectable: self.selectable)
     }
     
     // MARK: - Font Function
     func font(_ font: Font) -> SWLabel {
         SWLabel(self.text,
                 color: self.color,
-                font: font)
+                font: font,
+                selectable: self.selectable)
+    }
+    
+    // MARK: - Selectable Function
+    func makeSelectable() -> SWLabel {
+        SWLabel(self.text,
+                color: self.color,
+                font: self.font,
+                selectable: true)
     }
 }

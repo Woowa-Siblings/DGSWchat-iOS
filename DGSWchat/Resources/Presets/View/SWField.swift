@@ -35,7 +35,7 @@ struct SWField: View {
                     .renderingMode(.template)
                     .resizable()
                     .frame(width: 14, height: 14)
-                    .foregroundColor(focus ? SWColor.main1 : SWColor.gray)
+                    .foregroundColor(text.count > 0 ? SWColor.main1 : SWColor.gray)
                 
                 // MARK: - Text Field
                 switch(type) {

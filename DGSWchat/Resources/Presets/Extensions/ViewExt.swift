@@ -10,6 +10,14 @@ import SwiftUI
 // MARK: - Function Extensions of View
 extension View {
     
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+    
     @ViewBuilder func elevation() -> some View {
         self
             .shadow(color: SWColor.shadow.opacity(0.5), radius: 8, x: 2, y: 4)

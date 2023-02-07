@@ -13,6 +13,29 @@ struct LoginView: View {
     /// Variables
     @State var loginId: String = ""
     @State var loginPw: String = ""
+    @State var error: Bool = false
+    @State var errorMessage: String = ""
+    
+    // MARK: - Start Login
+    func startAuth() {
+        fetchCode(loginId: loginId, loginPw: loginPw) { response in
+            switch response.result {
+            case .success:
+                fetchAuth(code: decodeCode(response)) { response in
+                    switch response.result {
+                    case .success:
+                        completeAuth(response)
+                    case .failure:
+                        errorMessage = "서버에 연결할 수 없습니다"
+                        error.toggle()
+                    }
+                }
+            case .failure:
+                errorMessage = "ID 또는 비밀번호가 틀렸습니다"
+                error.toggle()
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,12 +54,13 @@ struct LoginView: View {
                 .padding(.bottom, 30)
             
             // MARK: - Login Button
-            SWButton(action: {
-                
-            }, label: "로그인")
-            .elevation()
+            SWButton(action: startAuth, label: "로그인")
+                .elevation()
         }
         .padding(30)
+        .alert(isPresented: $error) {
+            Alert(title: Text("오류"), message: Text(errorMessage))
+        }
     }
 }
 

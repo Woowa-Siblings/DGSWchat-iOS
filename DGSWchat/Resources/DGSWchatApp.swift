@@ -11,7 +11,7 @@ import SwiftUI
 struct DGSWchatApp: App {
     var body: some Scene {
         WindowGroup {
-            ChatView()
+            LoginView()
         }
     }
 }

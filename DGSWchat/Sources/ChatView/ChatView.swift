@@ -43,23 +43,21 @@ struct ChatView: View {
                 
                 // MARK: - Chat Scroll View
                 ScrollView {
-                    LazyVStack {
-                        ForEach(0..<chats.count, id: \.self) { idx in
-                            
-                            // MARK: - Chat Cell
-                            SingleChat(chat: chats[idx])
-                                .id(idx)
-                                .onChange(of: chats.count) { _ in
-                                    withAnimation(.default) {
-                                        value.scrollTo(chats.count - 1)
-                                    }
+                    ForEach(0..<chats.count, id: \.self) { idx in
+                        
+                        // MARK: - Chat Cell
+                        SingleChat(chat: chats[idx])
+                            .id(idx)
+                            .onChange(of: chats.count) { _ in
+                                withAnimation(.default) {
+                                    value.scrollTo(chats.count - 1)
                                 }
-                                .onAppear {
-                                    withAnimation(.default) {
-                                        value.scrollTo(chats.count - 1)
-                                    }
+                            }
+                            .onAppear {
+                                withAnimation(.default) {
+                                    value.scrollTo(chats.count - 1)
                                 }
-                        }
+                            }
                     }
                     .padding(30)
                 }
@@ -124,6 +122,7 @@ struct SingleChat: View {
                         .padding(.leading, 10)
                 }
                 SWLabel(chat.message)
+                    .makeSelectable()
                     .padding(.vertical, 5)
                     .padding(.horizontal, 12)
                     .background(chat.isauthor ? SWColor.main3 : SWColor.main5)
