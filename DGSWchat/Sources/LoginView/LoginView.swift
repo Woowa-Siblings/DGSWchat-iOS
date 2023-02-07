@@ -10,6 +10,9 @@ import SwiftUI
 // MARK: - Login View of DGSWchat
 struct LoginView: View {
     
+    /// Bindings
+    @Binding var screenState: Int
+    
     /// Variables
     @State var loginId: String = ""
     @State var loginPw: String = ""
@@ -25,6 +28,7 @@ struct LoginView: View {
                     switch response.result {
                     case .success:
                         completeAuth(response)
+                        screenState = 2
                     case .failure:
                         errorMessage = "서버에 연결할 수 없습니다"
                         error.toggle()
@@ -79,11 +83,5 @@ struct LoginView: View {
                 Alert(title: Text("오류"), message: Text(errorMessage))
             }
         }
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }

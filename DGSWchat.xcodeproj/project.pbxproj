@@ -31,6 +31,7 @@
 		9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD412991D2E300449466 /* ChatDataManager.swift */; };
 		9337AD452991D6D000449466 /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337AD442991D6D000449466 /* ChatData.swift */; };
 		937989502991F5620093A42A /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379894F2991F5620093A42A /* LoginData.swift */; };
+		9379895229920BAC0093A42A /* TransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895129920BAC0093A42A /* TransitionExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		9337AD412991D2E300449466 /* ChatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataManager.swift; sourceTree = "<group>"; };
 		9337AD442991D6D000449466 /* ChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
 		9379894F2991F5620093A42A /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		9379895129920BAC0093A42A /* TransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				93181DD82991C293008B51C0 /* ViewExt.swift */,
+				9379895129920BAC0093A42A /* TransitionExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				93181DEB2991D29C008B51C0 /* ChatView.swift in Sources */,
 				93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */,
 				93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */,
+				9379895229920BAC0093A42A /* TransitionExt.swift in Sources */,
 				93181DE12991D020008B51C0 /* LaunchController.swift in Sources */,
 				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
 				9337AD402991D2DE00449466 /* ChatController.swift in Sources */,
@@ -447,6 +451,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DGSWchat/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "대소톡";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +483,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DGSWchat/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "대소톡";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
