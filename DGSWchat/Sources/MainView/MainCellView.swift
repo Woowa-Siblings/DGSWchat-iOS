@@ -11,6 +11,7 @@ import SwiftUI
 struct MainCellView: View {
     
     /// Variables
+    let data: PostData
     var bigCell: Bool?
     
     var body: some View {
@@ -22,9 +23,9 @@ struct MainCellView: View {
                     
                     // MARK: - Student Info
                     VStack(alignment: .leading) {
-                        SWLabel("김경민")
+                        SWLabel(data.userName)
                             .font(SWFont.mid)
-                        SWLabel("1학년 1반 18번")
+                        SWLabel("\(data.grade)학년 \(data.room)반 \(data.number)번")
                             .font(SWFont.chat)
                             .color(SWColor.gray)
                     }
@@ -32,7 +33,7 @@ struct MainCellView: View {
                     Spacer()
                     
                     // MARK: - Tag
-                    SWLabel("#기술")
+                    SWLabel("#\(data.tag)")
                         .font(SWFont.bold)
                         .color(SWColor.main1)
                         .padding(.vertical, 3)
@@ -43,10 +44,10 @@ struct MainCellView: View {
                 .padding(.bottom, 7)
                 
                 // MARK: - Content
-                SWLabel("글입니다")
+                SWLabel(data.title)
                     .font(SWFont.body)
                     .padding(.bottom, 3)
-                Text("글일수도 있고 아닐수도 있습니다. 글일수도 있고 아닐수도 있습니다. 글일수도 있고 아닐수도 있습니다. 글일수도 있고 아닐수도 있습니다. ")
+                Text(data.content)
                     .lineLimit(3)
                     .font(SWFont.mid)
                 Spacer()
@@ -66,6 +67,5 @@ struct MainCellView: View {
         .frame(height: 102)
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 5))
-        .elevation()
     }
 }
