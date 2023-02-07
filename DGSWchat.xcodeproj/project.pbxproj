@@ -34,6 +34,8 @@
 		9379895229920BAC0093A42A /* TransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895129920BAC0093A42A /* TransitionExt.swift */; };
 		93798955299229BD0093A42A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798954299229BD0093A42A /* StringExt.swift */; };
 		93798957299230600093A42A /* SWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798956299230600093A42A /* SWView.swift */; };
+		9379895929923DDB0093A42A /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895829923DDB0093A42A /* MainCellView.swift */; };
+		9379895B29923FB30093A42A /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895A29923FB30093A42A /* MainData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		9379895129920BAC0093A42A /* TransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExt.swift; sourceTree = "<group>"; };
 		93798954299229BD0093A42A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		93798956299230600093A42A /* SWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWView.swift; sourceTree = "<group>"; };
+		9379895829923DDB0093A42A /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
+		9379895A29923FB30093A42A /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				93181DAD2991BCA6008B51C0 /* MainView.swift */,
+				9379895829923DDB0093A42A /* MainCellView.swift */,
+				9379895A29923FB30093A42A /* MainData.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -323,10 +329,12 @@
 				93181DEB2991D29C008B51C0 /* ChatView.swift in Sources */,
 				93181DAE2991BCA6008B51C0 /* MainView.swift in Sources */,
 				93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */,
+				9379895B29923FB30093A42A /* MainData.swift in Sources */,
 				9379895229920BAC0093A42A /* TransitionExt.swift in Sources */,
 				93181DE12991D020008B51C0 /* LaunchController.swift in Sources */,
 				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
 				9337AD402991D2DE00449466 /* ChatController.swift in Sources */,
+				9379895929923DDB0093A42A /* MainCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,7 +36,7 @@ struct MainView: View {
                     .elevation()
                 }
             }
-            .padding()
+            .padding(30)
         }
     }
 }

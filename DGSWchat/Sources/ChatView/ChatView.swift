@@ -55,9 +55,7 @@ struct ChatView: View {
                                     }
                                 }
                                 .onAppear {
-                                    withAnimation(.default) {
-                                        value.scrollTo(chats.count - 1)
-                                    }
+                                    value.scrollTo(chats.count - 1)
                                 }
                         }
                         .padding(30)
@@ -71,6 +69,9 @@ struct ChatView: View {
                 HStack {
                     TextField("우리의 친구 소구에게 물어보세요.", text: $input)
                         .font(SWFont.body)
+                        .onSubmit {
+                            send()
+                        }
                     Spacer()
                     
                     // MARK: - Send Button
