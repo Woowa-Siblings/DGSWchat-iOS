@@ -33,7 +33,7 @@ struct MainCellView: View {
                     Spacer()
                     
                     // MARK: - Tag
-                    SWLabel("#\(data.tag)")
+                    SWLabel("#\(extag[data.tag]!)")
                         .font(SWFont.bold)
                         .color(SWColor.main1)
                         .padding(.vertical, 3)

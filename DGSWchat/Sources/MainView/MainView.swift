@@ -12,7 +12,7 @@ struct MainView: View {
     
     /// Variables
     @State private var searchText: String = ""
-    @State private var datas: [PostData] = dummydata
+    @State private var datas: [PostData] = [PostData]()
     
     // MARK: - Creates Subcell
     func createSubCell(idx: Int, temp: Int) -> some View {
@@ -20,6 +20,21 @@ struct MainView: View {
             if idx + temp < datas.count {
                 MainCellView(data: datas[idx + temp])
             } else { Color.clear.frame(maxWidth: .infinity) }
+        }
+    }
+    
+    func initData() {
+        getPosts() { response in
+            switch response.result {
+            case .success:
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(Response<[PostData]>.self, from: value) else { return }
+                withAnimation(.default) {
+                    datas = result.data
+                }
+            case .failure:
+                print("error")
+            }
         }
     }
     
@@ -155,6 +170,7 @@ struct MainView: View {
                 .padding(.bottom, 20)
                 .elevation()
             }
+            .onAppear(perform: initData)
         }
     }
 }

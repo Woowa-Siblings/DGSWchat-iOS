@@ -60,7 +60,9 @@ struct WriteView: View {
                 .padding(.bottom, 25)
                 
                 SWButton(action: {
-                    
+                    writePost(title: title, tag: tag, content: content) { response in
+                        
+                    }
                 }, label: "질문 올리기")
                 .disabled(title.isEmpty || content.isEmpty || tag.isEmpty)
                 .elevation()

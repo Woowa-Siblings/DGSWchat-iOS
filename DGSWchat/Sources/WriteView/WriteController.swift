@@ -9,12 +9,12 @@ import Foundation
 import Alamofire
 
 // MARK: - Fetch DAuth Code
-func sendMessage(title: String, tag: String, content: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
+func writePost(title: String, tag: String, content: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("\(api)/post/submit",
                method: .post,
                parameters: ["title": title,
-                            tag: tag,
-                            content: content],
+                            "tag": ["학교": "School", "기술": "Tech"][tag]!,
+                            "content": content],
                encoding: JSONEncoding.default,
                headers: ["Content-Type": "application/json"],
                interceptor: Interceptor()
