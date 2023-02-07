@@ -13,6 +13,7 @@ struct WriteView: View {
     /// Variables
     @State private var title: String = ""
     @State private var content: String = ""
+    @State private var tag: String = ""
     
     var body: some View {
         SWView(title: "질문하기") {
@@ -30,7 +31,7 @@ struct WriteView: View {
                 
                 // MARK: - Content
                 WriteTagView(title: "내용", image: "Pencil")
-                TextField("질문할 내용을 입력하세요", text: $content)
+                TextField("질문할 내용을 입력하세요", text: $content, axis: .vertical)
                     .font(SWFont.body)
                     .padding(.vertical, 8)
                     .padding(.horizontal, 15)
@@ -40,6 +41,23 @@ struct WriteView: View {
                 
                 // MARK: - Tag
                 WriteTagView(title: "태그 선택", image: "Tag")
+                HStack(spacing: 10) {
+                    ForEach(["학교", "기술"], id: \.self) { text in
+                        Button(action: {
+                            tag = text
+                        }) {
+                            SWLabel("#\(text)")
+                                .font(SWFont.bold)
+                                .color(tag == text ? SWColor.main1 : SWColor.gray)
+                                .padding(.vertical, 3)
+                                .padding(.horizontal, 7)
+                                .background(tag == text ? SWColor.main4 : SWColor.lightgray)
+                                .clipShape(Capsule())
+                        }
+                    }
+                }
+                .padding(.leading, 15)
+                .padding(.bottom, 25)
                 
                 SWButton(action: {
                     
