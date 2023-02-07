@@ -186,9 +186,3 @@ struct PostView: View {
         .onAppear(perform: fetchComments)
     }
 }
-
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView(data: PostData(tag: "Tech", createDateTime: "", content: "dawefj230f2ewfoifkm3mlrmevmfdvn34o2fewklmwfw", userName: "이석호", title: "d", postId: 1, grade: 1, room: 1, number: 1, author: 1))
-    }
-}

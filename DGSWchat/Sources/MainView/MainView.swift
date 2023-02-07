@@ -225,9 +225,3 @@ struct MainView: View {
         .navigationViewStyle(.stack)
     }
 }
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}

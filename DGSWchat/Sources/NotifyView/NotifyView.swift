@@ -81,9 +81,3 @@ struct NotifyView: View {
         .onAppear(perform: initNotify)
     }
 }
-
-struct NotifyView_Previews: PreviewProvider {
-    static var previews: some View {
-        NotifyView()
-    }
-}

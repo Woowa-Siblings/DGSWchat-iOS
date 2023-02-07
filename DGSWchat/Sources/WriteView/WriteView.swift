@@ -102,9 +102,3 @@ struct WriteTagView: View {
         }
     }
 }
-
-struct WriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        WriteView()
-    }
-}
