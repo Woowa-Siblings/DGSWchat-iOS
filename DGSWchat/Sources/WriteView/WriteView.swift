@@ -62,6 +62,7 @@ struct WriteView: View {
                 SWButton(action: {
                     
                 }, label: "질문 올리기")
+                .disabled(title.isEmpty || content.isEmpty || tag.isEmpty)
                 .elevation()
                 Spacer()
             }

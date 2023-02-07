@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-// MARK: - Fetch DAuth Code
+// MARK: - Send Message
 func sendMessage(message: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("https://clovastudio.apigw.ntruss.com/testapp/v1/tasks/x56jxyz7/completions/LK-B",
                method: .post,

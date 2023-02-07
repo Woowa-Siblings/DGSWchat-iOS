@@ -36,10 +36,10 @@ struct OnboardingView: View {
     
     // MARK: - Start Login
     func startAuth() {
-        fetchCode(loginId: loginId, loginPw: loginPw) { response in
+        login(loginId: loginId, loginPw: loginPw) { response in
             switch response.result {
             case .success:
-                print("as")
+                completeAuth(response)
 //                print(decodeCode(response))
 //                fetchAuth(code: decodeCode(response)) { response in
 //                    print(String(decoding: response.data!, as: UTF8.self))
@@ -104,6 +104,7 @@ struct OnboardingView: View {
                     
                     // MARK: - Login Button
                     SWButton(action: startAuth, label: "로그인")
+                        .disabled(loginId.isEmpty || loginPw.isEmpty)
                         .elevation()
                         .padding(.bottom, 8)
                     
@@ -173,10 +174,17 @@ struct OnboardingView: View {
                         .padding(.bottom, 40)
                     
                     // MARK: - Password Check
-                    SWField(text: $registerPwCheck,
-                            placeholder: "비밀번호를 재입력하세요.",
-                            icon: "Unlock", type: .secure)
-                        .padding(.bottom, 35)
+                    ZStack(alignment: .trailing) {
+                        SWField(text: $registerPwCheck,
+                                placeholder: "비밀번호를 재입력하세요.",
+                                icon: "Unlock", type: .secure)
+                        if !registerPwCheck.isEmpty {
+                            Image(registerPw == registerPwCheck ? "Check" : "Exit")
+                                .resizable()
+                                .frame(width: 10, height: 10)
+                        }
+                    }
+                    .padding(.bottom, 35)
                     
                     // MARK: - Student Info
                     VStack(alignment: .leading, spacing: 0) {
@@ -248,6 +256,10 @@ struct OnboardingView: View {
                     
                     // MARK: - Button
                     SWButton(action: startAuth, label: "회원가입")
+                        .disabled(registerName.isEmpty || registerId.isEmpty ||
+                                  registerPw.isEmpty || registerPwCheck.isEmpty ||
+                                  registerGrade.isEmpty || registerClass.isEmpty ||
+                                  registerNumber.isEmpty || registerPw != registerPwCheck)
                         .elevation()
                 }
                 .padding(30)

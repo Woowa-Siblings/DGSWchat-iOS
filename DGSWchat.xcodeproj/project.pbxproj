@@ -22,7 +22,6 @@
 		93181DD92991C293008B51C0 /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DD82991C293008B51C0 /* ViewExt.swift */; };
 		93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDB2991CFB2008B51C0 /* Constants.swift */; };
 		93181DDF2991D01A008B51C0 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DDE2991D01A008B51C0 /* OnboardingController.swift */; };
-		93181DE12991D020008B51C0 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE02991D020008B51C0 /* LaunchController.swift */; };
 		93181DE32991D0B7008B51C0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE22991D0B7008B51C0 /* Response.swift */; };
 		93181DE52991D0E0008B51C0 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93181DE42991D0E0008B51C0 /* TokenManager.swift */; };
 		93181DE82991D286008B51C0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93181DE72991D286008B51C0 /* RealmSwift */; };
@@ -63,7 +62,6 @@
 		93181DDB2991CFB2008B51C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		93181DDD2991CFE8008B51C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		93181DDE2991D01A008B51C0 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
-		93181DE02991D020008B51C0 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		93181DE22991D0B7008B51C0 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		93181DE42991D0E0008B51C0 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		93181DEA2991D29C008B51C0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				93181DC02991BDF7008B51C0 /* LaunchView.swift */,
-				93181DE02991D020008B51C0 /* LaunchController.swift */,
 			);
 			path = LaunchView;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 				93181DAC2991BCA6008B51C0 /* DGSWchatApp.swift in Sources */,
 				9379895B29923FB30093A42A /* MainData.swift in Sources */,
 				9379895229920BAC0093A42A /* TransitionExt.swift in Sources */,
-				93181DE12991D020008B51C0 /* LaunchController.swift in Sources */,
 				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
 				9337AD402991D2DE00449466 /* ChatController.swift in Sources */,
 				9379895929923DDB0093A42A /* MainCellView.swift in Sources */,

@@ -10,7 +10,7 @@ import Alamofire
 import CryptoKit
 
 // MARK: - Fetch DAuth Code
-func fetchCode(loginId: String, loginPw: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
+func login(loginId: String, loginPw: String, completion: @escaping (AFDataResponse<Data>) -> Void) {
     AF.request("\(api)/login",
                method: .post,
                parameters: ["id": loginId, "pw":
