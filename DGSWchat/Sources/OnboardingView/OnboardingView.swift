@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Alamofire
+import CryptoKit
 
 // MARK: - Onboarding View of DGSWchat
 struct OnboardingView: View {
@@ -57,6 +59,34 @@ struct OnboardingView: View {
                 error.toggle()
             }
         }
+    }
+    
+    // MARK: - Start Register
+    func startRegister() {
+        AF.request("\(api)/auth/register",
+                   method: .post,
+                   parameters: ["userId": registerId,
+                                "nickname": registerName,
+                                "password": SHA512.hash(data: registerPw.data(using: .utf8)!)
+                    .compactMap{ String(format: "%02x", $0) }.joined().uppercased(),
+                                "grade": Int(registerGrade)!,
+                                "room": Int(registerClass)!,
+                                "number": Int(registerNumber)!],
+                   encoding: JSONEncoding.default,
+                   headers: ["Content-Type": "application/json"]
+        ) { $0.timeoutInterval = 5 }
+            .validate()
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    loginId = registerId
+                    loginPw = registerPw
+                    startAuth()
+                case .failure:
+                    errorMessage = "회원가입에 실패했습니다"
+                    error.toggle()
+                }
+            }
     }
     
     var body: some View {
@@ -253,7 +283,7 @@ struct OnboardingView: View {
                     .font(SWFont.body)
                     
                     // MARK: - Button
-                    SWButton(action: startAuth, label: "회원가입")
+                    SWButton(action: startRegister, label: "회원가입")
                         .disabled(registerName.isEmpty || registerId.isEmpty ||
                                   registerPw.isEmpty || registerPwCheck.isEmpty ||
                                   registerGrade.isEmpty || registerClass.isEmpty ||
