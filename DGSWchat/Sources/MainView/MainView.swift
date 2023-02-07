@@ -14,11 +14,24 @@ struct MainView: View {
     @State private var searchText: String = ""
     @State private var datas: [PostData] = [PostData]()
     
+    // MARK: - Creates Cell
+    func createCell(idx: Int) -> some View {
+        Group {
+            if idx < datas.count {
+                NavigationLink(destination: PostView(data: datas[idx])) {
+                    MainCellView(data: datas[idx], bigCell: true)
+                }
+            } else { Color.clear.frame(maxWidth: .infinity) }
+        }
+    }
+    
     // MARK: - Creates Subcell
     func createSubCell(idx: Int, temp: Int) -> some View {
         Group {
             if idx + temp < datas.count {
-                MainCellView(data: datas[idx + temp])
+                NavigationLink(destination: PostView(data: datas[idx + temp])) {
+                    MainCellView(data: datas[idx + temp])
+                }
             } else { Color.clear.frame(maxWidth: .infinity) }
         }
     }
@@ -130,7 +143,7 @@ struct MainView: View {
                             // MARK: - Cells
                             ForEach(0..<datas.count, id: \.self) { idx in
                                 if idx % 5 == 0 {
-                                    MainCellView(data: datas[idx], bigCell: true)
+                                    createCell(idx: idx)
                                 }
                                 
                                 // MARK: - Smaller Cells

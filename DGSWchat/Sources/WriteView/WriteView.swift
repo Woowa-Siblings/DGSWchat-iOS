@@ -10,6 +10,8 @@ import SwiftUI
 // MARK: - Write View of DGSWchat
 struct WriteView: View {
     
+    @Environment(\.dismiss) private var dismiss
+    
     /// Variables
     @State private var title: String = ""
     @State private var content: String = ""
@@ -59,9 +61,15 @@ struct WriteView: View {
                 .padding(.leading, 15)
                 .padding(.bottom, 25)
                 
+                // MARK: - Upload Button
                 SWButton(action: {
                     writePost(title: title, tag: tag, content: content) { response in
-                        
+                        switch response.result {
+                        case .success:
+                            dismiss()
+                        case .failure:
+                            print("error")
+                        }
                     }
                 }, label: "질문 올리기")
                 .disabled(title.isEmpty || content.isEmpty || tag.isEmpty)
