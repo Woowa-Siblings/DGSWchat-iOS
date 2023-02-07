@@ -10,7 +10,9 @@ import SwiftUI
 // MARK: - Main View of DGSWchat
 struct MainView: View {
     
-    @State var datas: [PostData] = dummydata
+    /// Variables
+    @State private var searchText: String = ""
+    @State private var datas: [PostData] = dummydata
     
     // MARK: - Creates Subcell
     func createSubCell(idx: Int, temp: Int) -> some View {
@@ -23,10 +25,50 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
+                
+                // MARK: - Upper Bar
+                HStack(spacing: 5) {
+                    NavigationLink(destination: ProfileView()
+                        .navigationBarHidden(true))
+                    {
+                        Image("Profile")
+                            .renderingMode(.template)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 17)
+                            .foregroundColor(SWColor.gray)
+                    }
+                    
+                    // MARK: - Search Input
+                    HStack {
+                        TextField("키워드로 검색하기", text: $searchText)
+                            .font(SWFont.body)
+                        Spacer()
+                        
+                        // MARK: - Send Button
+                        Button(action: {
+                        }) {
+                            Image("Search")
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(SWColor.main1)
+                        }
+                    }
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 20)
+                    .background(SWColor.lightgray)
+                    .clipShape(Capsule())
+                }
+                .padding(.top, 10)
+                .padding(.bottom, 20)
+                .padding(.horizontal, 30)
                 
                 // MARK: - Chat Banner
-                NavigationLink(destination: ChatView().navigationBarHidden(true)) {
+                NavigationLink(destination: ChatView()
+                    .navigationBarHidden(true))
+                {
                     HStack {
                         Image("Sogu")
                             .resizable()

@@ -14,25 +14,25 @@ struct OnboardingView: View {
     @Binding var screenState: Int
     
     /// Variables
-    @State var transition: AnyTransition = .backslide
-    @State var loginId: String = ""
-    @State var loginPw: String = ""
+    @State private var transition: AnyTransition = .backslide
+    @State private var loginId: String = ""
+    @State private var loginPw: String = ""
     
-    @State var errorMessage: String = ""
-    @State var error: Bool = false
-    @State var register: Bool = false
+    @State private var errorMessage: String = ""
+    @State private var error: Bool = false
+    @State private var register: Bool = false
     
-    @State var registerName: String = ""
-    @State var registerId: String = ""
-    @State var registerPw: String = ""
-    @State var registerPwCheck: String = ""
+    @State private var registerName: String = ""
+    @State private var registerId: String = ""
+    @State private var registerPw: String = ""
+    @State private var registerPwCheck: String = ""
     
-    @State var registerGrade: String = ""
-    @FocusState var gradeState: Bool
-    @State var registerClass: String = ""
-    @FocusState var classState: Bool
-    @State var registerNumber: String = ""
-    @FocusState var numberState: Bool
+    @State private var registerGrade: String = ""
+    @FocusState private var gradeState: Bool
+    @State private var registerClass: String = ""
+    @FocusState private var classState: Bool
+    @State private var registerNumber: String = ""
+    @FocusState private var numberState: Bool
     
     // MARK: - Start Login
     func startAuth() {

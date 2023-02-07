@@ -36,6 +36,9 @@
 		93798957299230600093A42A /* SWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798956299230600093A42A /* SWView.swift */; };
 		9379895929923DDB0093A42A /* MainCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895829923DDB0093A42A /* MainCellView.swift */; };
 		9379895B29923FB30093A42A /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895A29923FB30093A42A /* MainData.swift */; };
+		93C2BAE12992610C005C2CAF /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2BAE02992610C005C2CAF /* ProfileController.swift */; };
+		93C2BAE329926110005C2CAF /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2BAE229926110005C2CAF /* ProfileData.swift */; };
+		93C2BAE52992611B005C2CAF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2BAE42992611B005C2CAF /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		93798956299230600093A42A /* SWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWView.swift; sourceTree = "<group>"; };
 		9379895829923DDB0093A42A /* MainCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellView.swift; sourceTree = "<group>"; };
 		9379895A29923FB30093A42A /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
+		93C2BAE02992610C005C2CAF /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		93C2BAE229926110005C2CAF /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		93C2BAE42992611B005C2CAF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 				93181DC92991BE9E008B51C0 /* OnboardingView */,
 				93181DC82991BE97008B51C0 /* MainView */,
 				93181DE92991D296008B51C0 /* ChatView */,
+				93C2BADD299260FF005C2CAF /* ProfileView */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -232,6 +239,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		93C2BADD299260FF005C2CAF /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				93C2BAE42992611B005C2CAF /* ProfileView.swift */,
+				93C2BAE02992610C005C2CAF /* ProfileController.swift */,
+				93C2BAE229926110005C2CAF /* ProfileData.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,10 +332,13 @@
 				93181DCB2991BEA6008B51C0 /* OnboardingView.swift in Sources */,
 				93798957299230600093A42A /* SWView.swift in Sources */,
 				9337AD452991D6D000449466 /* ChatData.swift in Sources */,
+				93C2BAE12992610C005C2CAF /* ProfileController.swift in Sources */,
 				93181DDF2991D01A008B51C0 /* OnboardingController.swift in Sources */,
 				93181DE32991D0B7008B51C0 /* Response.swift in Sources */,
 				93181DCE2991BEF5008B51C0 /* SWButton.swift in Sources */,
 				93181DD92991C293008B51C0 /* ViewExt.swift in Sources */,
+				93C2BAE52992611B005C2CAF /* ProfileView.swift in Sources */,
+				93C2BAE329926110005C2CAF /* ProfileData.swift in Sources */,
 				9337AD422991D2E300449466 /* ChatDataManager.swift in Sources */,
 				93181DD42991BF95008B51C0 /* SWLabel.swift in Sources */,
 				93798955299229BD0093A42A /* StringExt.swift in Sources */,

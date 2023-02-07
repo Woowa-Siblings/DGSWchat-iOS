@@ -20,7 +20,7 @@ extension View {
     
     @ViewBuilder func elevation() -> some View {
         self
-            .shadow(color: SWColor.shadow.opacity(0.8), radius: 8, x: 2, y: 4)
+            .shadow(color: SWColor.shadow.opacity(0.3), radius: 10, x: 1, y: 1)
             .zIndex(1)
     }
 }

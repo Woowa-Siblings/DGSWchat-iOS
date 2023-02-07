@@ -11,8 +11,8 @@ import SwiftUI
 struct ChatView: View {
     
     /// Variables
-    @State var chats: [Chat] = [Chat]()
-    @State var input: String = ""
+    @State private var chats: [Chat] = [Chat]()
+    @State private var input: String = ""
     
     // MARK: - Sending Chat
     private func send() {
