@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+// MARK: - Profile View of DGSWchat
 struct ProfileView: View {
     
+    /// Variables
     @State var data: UserData = UserData(userId: "", nickname: "", grade: 0, room: 0, number: 0)
     @State var posts: [PostData] = [PostData]()
     
+    // MARK: - Fetch Profile
     func initProfile() {
         fetchProfile() { response in
             print(String(decoding: response.data!, as: UTF8.self))
@@ -30,9 +33,13 @@ struct ProfileView: View {
     }
     
     var body: some View {
+        
+        // MARK: - Top Bar
         SWView(title: "프로필") {
             VStack(spacing: 0) {
                 HStack(spacing: 10) {
+                    
+                    // MARK: - Profile
                     Image("Sogu")
                         .resizable()
                         .scaledToFit()
@@ -57,6 +64,8 @@ struct ProfileView: View {
                         }
                     }
                     Spacer()
+                    
+                    // MARK: - Logout Button
                     Button(action: {
                         removeToken(.accessToken)
                         removeToken(.refreshToken)
@@ -77,6 +86,8 @@ struct ProfileView: View {
                 }
                 .padding(.vertical, 20)
                 .padding(.horizontal, 30)
+                
+                // MARK: - Posts
                 ScrollView {
                     ListView(datas: posts, title: "내가 작성한 질문")
                 }

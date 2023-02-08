@@ -47,6 +47,7 @@ struct LaunchView: View {
         else if screenState == 1 {
             OnboardingView(screenState: $screenState)
                 .transition(.backslide)
+                .zIndex(5)
         }
         
         // MARK: - Main View

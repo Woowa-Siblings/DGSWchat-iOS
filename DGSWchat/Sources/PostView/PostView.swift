@@ -77,6 +77,8 @@ struct PostView: View {
             VStack(spacing: 0) {
                 ScrollView {
                     VStack(alignment: .leading) {
+                        
+                        // MARK: - User Information
                         VStack(alignment: .leading, spacing: 0) {
                             HStack(spacing: 0) {
                                 Image("Sogu")
@@ -96,6 +98,7 @@ struct PostView: View {
                             }
                             .padding(.bottom, 10)
                             
+                            // MARK: - Post
                             HStack {
                                 SWLabel(data.title)
                                     .font(SWFont.subtitle)
@@ -121,6 +124,7 @@ struct PostView: View {
                         .elevation()
                         .padding(.bottom, 20)
                         
+                        // MARK: - Comments
                         VStack(alignment: .leading, spacing: 15) {
                             ForEach(comments, id: \.self) { comment in
                                 VStack(alignment: .leading, spacing: 5) {

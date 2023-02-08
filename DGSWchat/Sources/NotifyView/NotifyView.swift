@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+// MARK: - Notify View of DGSWchat
 struct NotifyView: View {
     
     /// Variables
     @State private var datas: [NotifyData] = [NotifyData]()
     
+    // MARK: - Fetch Notification
     func initNotify() {
         fetchNotify() { response in
             switch response.result {
@@ -32,6 +34,8 @@ struct NotifyView: View {
             ScrollView {
                 VStack(spacing: 15) {
                     ForEach(datas, id: \.self) { data in
+                        
+                        // MARK: - Notify Cell
                         NavigationLink(destination: PostView(data: PostData(tag: "",
                                                                             createDateTime: "",
                                                                             content: "",

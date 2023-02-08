@@ -44,7 +44,9 @@ struct MainCellView: View {
                 .padding(.bottom, 7)
                 
                 // MARK: - Content
-                SWLabel(data.title)
+                Text(data.title)
+                    .foregroundColor(SWColor.label)
+                    .lineLimit(1)
                     .font(SWFont.body)
                     .padding(.bottom, 3)
                 Text(data.content)
