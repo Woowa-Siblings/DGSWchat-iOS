@@ -37,6 +37,7 @@
 		9365BA0F2992AB0B00123780 /* NotifyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365BA0E2992AB0B00123780 /* NotifyData.swift */; };
 		9365BA112993090800123780 /* NotifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365BA102993090800123780 /* NotifyController.swift */; };
 		9365BA132993119500123780 /* ChatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365BA122993119500123780 /* ChatCellView.swift */; };
+		9365BA162993245000123780 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9365BA152993245000123780 /* ListView.swift */; };
 		937989502991F5620093A42A /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379894F2991F5620093A42A /* OnboardingData.swift */; };
 		9379895229920BAC0093A42A /* TransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379895129920BAC0093A42A /* TransitionExt.swift */; };
 		93798955299229BD0093A42A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798954299229BD0093A42A /* StringExt.swift */; };
@@ -82,6 +83,7 @@
 		9365BA0E2992AB0B00123780 /* NotifyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyData.swift; sourceTree = "<group>"; };
 		9365BA102993090800123780 /* NotifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyController.swift; sourceTree = "<group>"; };
 		9365BA122993119500123780 /* ChatCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellView.swift; sourceTree = "<group>"; };
+		9365BA152993245000123780 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		9379894F2991F5620093A42A /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		9379895129920BAC0093A42A /* TransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExt.swift; sourceTree = "<group>"; };
 		93798954299229BD0093A42A /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				93181DC92991BE9E008B51C0 /* OnboardingView */,
 				93181DC82991BE97008B51C0 /* MainView */,
 				9361D88E2992850300819A3C /* PostView */,
+				9365BA142993244A00123780 /* ListView */,
 				9361D8892992678A00819A3C /* NotifyView */,
 				93181DE92991D296008B51C0 /* ChatView */,
 				93C2BAE6299263DE005C2CAF /* WriteView */,
@@ -279,6 +282,14 @@
 				9361D8932992853800819A3C /* PostData.swift */,
 			);
 			path = PostView;
+			sourceTree = "<group>";
+		};
+		9365BA142993244A00123780 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				9365BA152993245000123780 /* ListView.swift */,
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 		93C2BADD299260FF005C2CAF /* ProfileView */ = {
@@ -412,6 +423,7 @@
 				9365BA0F2992AB0B00123780 /* NotifyData.swift in Sources */,
 				9379895B29923FB30093A42A /* MainData.swift in Sources */,
 				9379895229920BAC0093A42A /* TransitionExt.swift in Sources */,
+				9365BA162993245000123780 /* ListView.swift in Sources */,
 				93181DDC2991CFB2008B51C0 /* Constants.swift in Sources */,
 				9337AD402991D2DE00449466 /* ChatController.swift in Sources */,
 				9379895929923DDB0093A42A /* MainCellView.swift in Sources */,

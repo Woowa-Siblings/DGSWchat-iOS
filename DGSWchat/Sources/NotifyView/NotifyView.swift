@@ -18,7 +18,9 @@ struct NotifyView: View {
             case .success:
                 guard let value = response.value else { return }
                 guard let result = try? JSONDecoder().decode(Response<[NotifyData]>.self, from: value) else { return }
-                datas = result.data
+                withAnimation(.default) {
+                    datas = result.data
+                }
             case .failure:
                 print("error")
             }
@@ -76,6 +78,9 @@ struct NotifyView: View {
                 .padding(.horizontal, 30)
                 .padding(.top, 20)
                 .frame(maxWidth: .infinity)
+            }
+            .refreshable {
+                initNotify()
             }
         }
         .onAppear(perform: initNotify)

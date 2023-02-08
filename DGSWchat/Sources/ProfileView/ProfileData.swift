@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct ProfileData: Codable {
+    let user: UserData
+    let post: [PostData]
+}
+
+struct UserData: Codable {
+    let userId, nickname: String
+    let grade, room, number: Int
+}

@@ -8,6 +8,27 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State var data: UserData = UserData(userId: "", nickname: "", grade: 0, room: 0, number: 0)
+    @State var posts: [PostData] = [PostData]()
+    
+    func initProfile() {
+        fetchProfile() { response in
+            print(String(decoding: response.data!, as: UTF8.self))
+            switch response.result {
+            case .success:
+                guard let value = response.value else { return }
+                guard let result = try? JSONDecoder().decode(Response<ProfileData>.self, from: value) else { return }
+                withAnimation(.default) {
+                    data = result.data.user
+                    posts = result.data.post
+                }
+            case .failure:
+                print("error")
+            }
+        }
+    }
+    
     var body: some View {
         SWView(title: "프로필") {
             VStack(spacing: 0) {
@@ -18,9 +39,9 @@ struct ProfileView: View {
                         .frame(height: 40)
                     VStack(alignment: .leading, spacing: 1) {
                         HStack(spacing: 5) {
-                            SWLabel("최희건")
+                            SWLabel(data.nickname)
                                 .font(SWFont.lowtitle)
-                            SWLabel("@asdkwqf")
+                            SWLabel("@ \(data.userId)")
                                 .font(SWFont.mid)
                                 .color(SWColor.gray)
                         }
@@ -30,7 +51,7 @@ struct ProfileView: View {
                                 .resizable()
                                 .frame(width: 8, height: 8)
                                 .foregroundColor(SWColor.main1)
-                            SWLabel("@asdkwqf")
+                            SWLabel("\(data.grade)학년 \(data.room)반 \(data.number)번")
                                 .font(SWFont.mid)
                                 .color(SWColor.main1)
                         }
@@ -54,18 +75,18 @@ struct ProfileView: View {
                         }
                     }
                 }
-                .padding(.top, 20)
+                .padding(.vertical, 20)
                 .padding(.horizontal, 30)
                 ScrollView {
-                    
+                    ListView(datas: posts, title: "내가 작성한 질문")
+                }
+                .refreshable {
+                    initProfile()
                 }
             }
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+        .onAppear {
+            initProfile()
+        }
     }
 }
