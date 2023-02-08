@@ -13,6 +13,7 @@ struct MainView: View {
     /// Variables
     @State private var searchText: String = ""
     @State private var datas: [PostData] = [PostData]()
+    @State private var original: [PostData] = [PostData]()
     @State private var isNotification: Bool = true
 
     func initData() {
@@ -26,9 +27,23 @@ struct MainView: View {
                 guard let result = try? JSONDecoder().decode(Response<[PostData]>.self, from: value) else { return }
                 withAnimation(.default) {
                     datas = result.data
+                    original = datas
                 }
             case .failure:
                 print("error")
+            }
+        }
+    }
+    
+    func searchData() {
+        withAnimation(.default) {
+            if searchText.isEmpty {
+                datas = original
+            } else {
+                datas = original.filter {
+                    $0.content.localizedCaseInsensitiveContains(searchText) ||
+                    $0.title.localizedCaseInsensitiveContains(searchText)
+                }
             }
         }
     }
@@ -55,11 +70,13 @@ struct MainView: View {
                         HStack {
                             TextField("키워드로 검색하기", text: $searchText)
                                 .font(SWFont.body)
+                                .onSubmit {
+                                    searchData()
+                                }
                             Spacer()
                             
                             // MARK: - Send Button
-                            Button(action: {
-                            }) {
+                            Button(action: searchData) {
                                 Image("Search")
                                     .renderingMode(.template)
                                     .resizable()

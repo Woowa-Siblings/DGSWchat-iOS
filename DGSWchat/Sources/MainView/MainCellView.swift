@@ -48,6 +48,7 @@ struct MainCellView: View {
                     .font(SWFont.body)
                     .padding(.bottom, 3)
                 Text(data.content)
+                    .foregroundColor(SWColor.label)
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)
                     .font(SWFont.mid)
